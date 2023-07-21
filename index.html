@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gerador de Senhas</title>
+  </head>
+  <body>
+    <h1>Gerador de Senhas</h1>
+
+    <form id="senhaForm">
+      <label for="num">Tamanho da senha:</label>
+      <input
+        type="number"
+        id="num"
+        name="num"
+        min="1"
+        max="30"
+        onkeydown="return event.keyCode !==69"
+        required
+      />
+      <br />
+
+      <label for="minusculas">Letras Minúsculas</label>
+      <input type="checkbox" id="minusculas" />
+      <br />
+
+      <label for="maiusculas">Letras Maiúsculas</label>
+      <input type="checkbox" id="maiusculas" />
+      <br />
+
+      <label for="numerais">Números</label>
+      <input type="checkbox" id="numerais" />
+      <br />
+
+      <label for="especiais">Caracteres Especiais</label>
+      <input type="checkbox" id="especiais" />
+      <br />
+
+      <button type="button" id="gerarSenha" onclick="mostrarSenha()">
+        Gerar Senha
+      </button>
+    </form>
+
+    <p id="senhaGerada">Aqui aparecerá a senha gerada</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
