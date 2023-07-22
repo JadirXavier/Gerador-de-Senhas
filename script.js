@@ -7,6 +7,24 @@ document.getElementById("num").addEventListener("input", function () {
   }
 });
 
+function atualizarSlider() {
+  const num = document.getElementById("num");
+  const numInput = document.getElementById("numInput");
+  const tamanhoSenha = document.getElementById("tamanhoSenha");
+
+  num.value = numInput.value;
+  tamanhoSenha.innerHTML = numInput.value;
+}
+
+function atualizarInput() {
+  const num = document.getElementById("num");
+  const numInput = document.getElementById("numInput");
+  const tamanhoSenha = document.getElementById("tamanhoSenha");
+
+  numInput.value = num.value;
+  tamanhoSenha.innerHTML = num.value;
+}
+
 function mostrarSenha() {
   const num = document.getElementById("num").value;
   const minusculas = document.getElementById("minusculas").checked;
