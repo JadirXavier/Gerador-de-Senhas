@@ -21,35 +21,60 @@
           <label for="num">Tamanho da senha:</label>
           <input
             type="range"
-            id="num"
-            name="num"
-            min="1"
-            max="30"
-            value="8"
-            oninput="atualizarInput()"
-          />
-          <input
-            type="number"
-            id="numInput"
+            id="numSlider"
+            name="numSlider"
             min="1"
             max="30"
             value="8"
             oninput="atualizarSlider()"
           />
+          <input
+            type="number"
+            id="num"
+            min="1"
+            max="30"
+            value="8"
+            oninput="atualizarInput()"
+          />
         </div>
 
         <div id="opcoes">
-          <label for="minusculas">Letras Minúsculas</label>
-          <input type="checkbox" id="minusculas" />
-
-          <label for="maiusculas">Letras Maiúsculas</label>
-          <input type="checkbox" id="maiusculas" />
-
-          <label for="numerais">Números</label>
-          <input type="checkbox" id="numerais" />
-
-          <label for="especiais">Caracteres Especiais</label>
-          <input type="checkbox" id="especiais" />
+          <ul>
+            <li>
+              <input type="checkbox" id="minusculas" checked />
+              <label for="minusculas"
+                ><img
+                  src="imgs/character-lower-case.svg"
+                  alt="Letras Minúsculas"
+              /></label>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <input type="checkbox" id="maiusculas" />
+              <label for="maiusculas"
+                ><img
+                  src="imgs/character-upper-case.svg"
+                  alt="Letras Maiúsculas"
+              /></label>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <input type="checkbox" id="numerais" />
+              <label for="numerais"
+                ><img src="imgs/character-whole-number.svg" alt="Números"
+              /></label>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <input type="checkbox" id="especiais" />
+              <label for="especiais"
+                ><img src="imgs/character-symbol.svg" alt="Símbolos"
+              /></label>
+            </li>
+          </ul>
         </div>
       </form>
       <div class="resultado">

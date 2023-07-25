@@ -1,7 +1,9 @@
 document.getElementById("num").addEventListener("input", function () {
   const num = document.getElementById("num");
+  const numSlider = document.getElementById("numSlider");
   if (num.value < 1) {
     num.value = 1;
+    numSlider.value = 1;
   } else if (num.value > 30) {
     num.value = 30;
   }
@@ -9,21 +11,18 @@ document.getElementById("num").addEventListener("input", function () {
 
 function atualizarSlider() {
   const num = document.getElementById("num");
-  const numInput = document.getElementById("numInput");
-  const tamanhoSenha = document.getElementById("tamanhoSenha");
+  const numSlider = document.getElementById("numSlider");
 
-  num.value = numInput.value;
-  tamanhoSenha.innerHTML = numInput.value;
+  num.value = numSlider.value;
 }
 
 function atualizarInput() {
   const num = document.getElementById("num");
-  const numInput = document.getElementById("numInput");
-  const tamanhoSenha = document.getElementById("tamanhoSenha");
+  const numSlider = document.getElementById("numSlider");
 
-  numInput.value = num.value;
-  tamanhoSenha.innerHTML = num.value;
+  numSlider.value = num.value;
 }
+
 
 function mostrarSenha() {
   const num = document.getElementById("num").value;
@@ -101,6 +100,7 @@ function geraSenhas(num, minusculas, maiusculas, numerais, especiais) {
   const arrayNumeros = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   const arrayEspeciais = [
     "!",
+    "?",
     "@",
     "#",
     "$",
