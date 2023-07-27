@@ -17,8 +17,8 @@
     <div class="container">
       <h1>Gerador de Senhas</h1>
       <form id="senhaForm">
+        <label for="num">Tamanho da senha:</label>
         <div class="input">
-          <label for="num">Tamanho da senha:</label>
           <input
             type="range"
             id="numSlider"
@@ -78,10 +78,20 @@
         </div>
       </form>
       <div class="resultado">
-        <p id="senhaGerada">Aqui aparecerá a senha gerada</p>
-        <button type="button" id="gerarSenha" onclick="mostrarSenha()">
-          Gerar Senha
-        </button>
+        <p id="senhaGerada"></p>
+        <div class="botoes">
+          <button
+            type="button"
+            id="gerarSenha"
+            onclick="mostrarSenha()"
+            class="tooltip"
+          >
+            <img src="imgs/rotate.svg" />
+          </button>
+          <button type="button" id="copiar" onclick="copiar()">
+            <img src="imgs/copy.svg" />
+          </button>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

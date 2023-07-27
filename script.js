@@ -9,6 +9,16 @@ document.getElementById("num").addEventListener("input", function () {
   }
 });
 
+function copiar(){
+	const senhaGeradaTexto = document.getElementById("senhaGerada").innerText;
+	const textArea = document.createElement("textArea");
+    	textArea.value = senhaGeradaTexto;
+	document.body.appendChild(textArea);
+	textArea.select();
+	document.execCommand('copy');
+	document.body.removeChild(textArea);
+}
+
 function atualizarSlider() {
   const num = document.getElementById("num");
   const numSlider = document.getElementById("numSlider");

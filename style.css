@@ -32,14 +32,17 @@ body {
 
 h1 {
   font-size: 3rem;
+  width: 100%;
 }
 
 .container {
-  height: 25rem;
-  width: 50rem;
-  display: grid;
-  padding: 3rem;
-  grid-template-rows: 1fr 1fr 1fr;
+  height: 55%;
+  width: 55%;
+  display: flex;
+  margin: 2rem;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   border: 1px solid #d4d2e6;
   border-radius: 24px;
@@ -50,6 +53,11 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
+}
+
+#senhaForm label {
+  font-size: 1.5rem;
 }
 
 .input {
@@ -64,10 +72,11 @@ div.input > label {
   font-size: 1.5rem;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+#num {
+  height: 100%;
+  text-align: center;
+  font-size: 100%;
+  aspect-ratio: 1;
 }
 
 #opcoes {
@@ -92,6 +101,7 @@ div.input > label {
 img {
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 input[type="checkbox"] {
@@ -112,38 +122,36 @@ input[type="checkbox"]:not(:checked) + label img {
 #numSlider {
   -webkit-appearance: none;
   width: 100%;
-  height: 1.5rem;
-  background: rgb(255, 255, 255);
-  outline: none;
-  border: 0.1rem solid black;
+  height: 0.5rem;
+  background-color: black;
   border-radius: 0.25rem;
 }
 
 #numSlider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 60px;
+  width: 1.25rem;
+  height: 1.25rem;
   background: rgb(255, 255, 255);
   cursor: pointer;
-  border: 0.25rem solid black;
-  border-radius: 0.5rem;
+  background-color: blue;
+  border-radius: 1rem;
 }
 
 #numSlider::-moz-range-thumb {
-  width: 20px;
-  height: 60px;
-  background: rgb(255, 255, 255);
+  width: 1.25rem;
+  height: 1.25rem;
   cursor: pointer;
-  border: 0.25rem solid black;
+  background-color: blue;
   border-radius: 0.5rem;
 }
 
 .resultado {
   display: flex;
   height: 3rem;
-  width: 95%;
+  width: 100%;
   align-items: center;
+  gap: 2rem;
 }
 
 .resultado p {
@@ -161,7 +169,27 @@ input[type="checkbox"]:not(:checked) + label img {
   text-align: center;
 }
 
-#gerarSenha {
-  width: 3rem;
+.botoes {
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+
+.botoes button {
+  aspect-ratio: 1;
+  height: 100%;
+}
+
+.botoes button {
+  border: none;
+  background: white;
+  aspect-ratio: 1;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.botoes button:hover img {
+  filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(7441%)
+    hue-rotate(247deg) brightness(108%) contrast(138%);
 }
