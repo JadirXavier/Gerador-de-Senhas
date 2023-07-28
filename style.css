@@ -36,6 +36,7 @@ h1 {
 }
 
 .container {
+  min-width: 600px;
   height: 55%;
   width: 55%;
   display: flex;
@@ -62,6 +63,7 @@ h1 {
 
 .input {
   display: flex;
+  height: 2.5rem;
   flex-direction: row;
   gap: 2rem;
   align-items: center;
@@ -95,7 +97,7 @@ div.input > label {
 #opcoes label {
   display: block;
   height: 4rem;
-  width: 4rem;
+  aspect-ratio: 1;
 }
 
 img {
@@ -122,7 +124,7 @@ input[type="checkbox"]:not(:checked) + label img {
 #numSlider {
   -webkit-appearance: none;
   width: 100%;
-  height: 0.5rem;
+  height: 0.25rem;
   background-color: black;
   border-radius: 0.25rem;
 }
@@ -154,19 +156,22 @@ input[type="checkbox"]:not(:checked) + label img {
   gap: 2rem;
 }
 
-.resultado p {
+.senha {
   display: flex;
+  padding: 0.25rem 0.5rem;
   border: 1px solid #d4d2e6;
   background-color: #ffe;
   box-sizing: content-box;
-  height: 3rem;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
   align-items: center;
-  justify-content: center;
+  overflow: auto;
 }
 
-#senhaGerada {
-  width: 95%;
-  text-align: center;
+.senha::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .botoes {
@@ -192,4 +197,57 @@ input[type="checkbox"]:not(:checked) + label img {
 .botoes button:hover img {
   filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(7441%)
     hue-rotate(247deg) brightness(108%) contrast(138%);
+}
+
+@media screen and (max-width: 920px) {
+  .container {
+    max-width: 600px;
+    min-width: 200px;
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .input {
+    height: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #senhaForm {
+    gap: 1rem;
+  }
+
+  #senhaForm > label {
+    font-size: 1.25rem;
+  }
+
+  #opcoes {
+    gap: 1rem;
+  }
+
+  #opcoes label {
+    height: 3rem;
+  }
+
+  .senha {
+    font-size: 1rem;
+  }
+
+  .botoes button {
+    height: 2.5rem;
+  }
+
+  .resultado {
+    height: 2.5rem;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #opcoes label {
+    height: 2.5rem;
+  }
 }
