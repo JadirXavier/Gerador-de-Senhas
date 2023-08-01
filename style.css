@@ -214,9 +214,11 @@ input[type="checkbox"]:not(:checked) + label img {
   transition: all 0.3s ease;
 }
 
+@media (hover:hover){
 .botoes button:hover img {
   filter: brightness(0) saturate(100%) invert(7%) sepia(100%) saturate(7441%)
     hue-rotate(247deg) brightness(108%) contrast(138%);
+}
 }
 
 footer {
